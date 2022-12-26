@@ -1,0 +1,33 @@
+*{padding: 0;
+    margin: 0;
+}
+
+
+
+.header{
+   height: 70px; 
+   background-color: bisque;
+   display: flex;
+   flex-flow: row;
+   justify-content: space-between;
+  
+}
+.header-logo{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: left;   
+    max-width: 100px;
+}
+
+.header-navbar{ 
+    flex-wrap: wrap;
+    align-content: center;
+    max-width: 100px;
+}
+
+.header-log{
+    flex-wrap: wrap;
+    align-content: right;
+    max-width: 100px;
+    
+}
