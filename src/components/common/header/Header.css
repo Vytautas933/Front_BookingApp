@@ -5,8 +5,8 @@
 
 
 .header{
-   height: 70px; 
-   background-color: bisque;
+   height: 50px; 
+   background-color: rgb(125, 162, 169);
    display: flex;
    flex-flow: row;
    justify-content: space-between;
@@ -17,17 +17,66 @@
     flex-wrap: wrap;
     align-content: left;   
     max-width: 100px;
+    margin: 15px;
+    font-size: 20px;
+    margin-left: 20px;
 }
 
-.header-navbar{ 
+/* .header-navbar{ 
     flex-wrap: wrap;
     align-content: center;
-    max-width: 100px;
+    max-width: 400px;
+    margin: 15px;
+    
+    font-size: 20px;
+    margin-left: 130px; 
+} */
+
+.header-navbar>ul{
+    list-style-type: none;
+  display: flex;
+  margin: 15px;
+  font-size: 20px;
+  align-content: center;
+  margin-left: 100px;
 }
 
+.header-navbar>li{
+    list-style: none;
+    margin-right: 30px;
+    padding-left: 50px;   
+}
+
+a{
+    text-decoration: none;
+    padding-right: 5px;
+    margin-right: 10px;
+    color: inherit;
+}
+
+
+
+
 .header-log{
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-content: right;
-    max-width: 100px;
-    
+    display: flex;
+    margin: 10px 0px 10px 10px
+}
+
+.header-btn{
+    display: flex;
+}
+
+
+
+.header-btn>button{
+    margin-right: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: block;
+    text-align: center;
+    width: 120px;
+    border: none;
+    border-radius: 30px;
 }

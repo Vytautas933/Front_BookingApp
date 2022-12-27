@@ -1,23 +1,29 @@
 import React from "react";
 import './Header.css';
 
+
+
 function Header(){
 
     return(
         <section className="header">
            <section className="header-logo">
-                Logo
+                <a href="eee.js">IRentEye</a>
            </section>
            <section className="header-navbar">
-                Nav bar
+                <ul>
+                    <li><a href="aa.js">Home</a></li>
+                    <li><a href="bb.js">Explore</a></li>
+                    <li><a href="cc.js">Forum</a></li>
+                    <li><a href="dd.js">About Us</a></li>
+                </ul>
            </section>
            <section className="header-log">
-                <section className="header-logIn">
-                    Log in
+                <section className="header-btn">
+                    <button>Log in</button>
+                    <button>Sing in</button>
                 </section>
-                <section className="header-SingUp">
-                    Sing In
-                </section>
+                
            </section>
         </section>
     )
