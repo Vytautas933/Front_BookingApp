@@ -1,5 +1,6 @@
 *{padding: 0;
     margin: 0;
+   
 }
 
 
@@ -23,15 +24,6 @@
     margin-left: 20px;
 }
 
-/* .header-navbar{ 
-    flex-wrap: wrap;
-    align-content: center;
-    max-width: 400px;
-    margin: 15px;
-    
-    font-size: 20px;
-    margin-left: 130px; 
-} */
 
 .header-navbar>ul{
     list-style-type: none;
@@ -60,24 +52,17 @@ a{
 
 .header-log{
     /* flex-wrap: wrap; */
-    align-content: right;
+    justify-content: space-between;
     display: flex;
-    margin: 10px 0px 10px 10px
+    margin: 10px 0px 10px 10px;
 }
 
 .header-btn{
     display: flex;
 }
 
-
-
-.header-btn>button{
-    margin-right: 10px;
-    background-color: rgb(0, 0, 0);
-    color: white;
-    display: block;
-    text-align: center;
-    width: 120px;
-    border: none;
-    border-radius: 30px;
+.name{
+    font-size: 18px;
+    display: flex;
+    line-height: 14px;
 }

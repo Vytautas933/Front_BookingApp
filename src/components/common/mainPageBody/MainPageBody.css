@@ -4,57 +4,58 @@ body{
 }
 
 .msg1 {
-    margin: 30px;
+    margin: 20px;
 }
 
 .messege{
     width: 95%;
-    margin-left: 2%;
+    margin-left: 1%;
     border: solid 1px black;
     border-radius: 5px;
 }
 
 p{
     margin: 9px;
-}
-
-.msg2{
-    margin: 30px;
-}
-
-.photograpgersAvatars{
-    margin: 30px;
-    display: flex;
-    width: 100%;
     
 }
 
+.msg2{
+    margin: 20px;
+    justify-content: space-evenly;
+}
 
+.photograpgersAvatars{
+    margin: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    
+}
 
-img{
+.photograpgersAvatars>img{
     border: solid 1px black;
     border-radius: 50%;
     height: 150px;
     width: 150px;
     flex-wrap: wrap;
     margin-right: 70px;
-    text-align: center;
-    align-items: center;
-    justify-content:space-evenly;
+    text-align: start;
+    line-height: 140px;
 }
+
+
 .msg3{
-    margin: 30px;
+    margin: 20px;
 }
 
 .forumMsg1{
     display: flex;
     flex: 1;
-    border: 1px solid black;
     margin-left: 2%;
     width: 95%;
     margin-top: 3px;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
 }
 
-.countbox{
-    float: right;
-}
+

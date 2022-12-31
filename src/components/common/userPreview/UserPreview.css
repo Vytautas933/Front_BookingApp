@@ -1,0 +1,117 @@
+.user{
+    margin: 20px;
+    width: 10%;
+}
+
+.info{
+    display: flex;
+}
+
+
+
+.avatar{
+    border: 1px solid red;
+    margin: 20px;
+    height: 130px;
+    width: 130px;
+    display: flex;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120px;
+}
+
+.rating{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bio{
+    margin: 20px;
+    margin-left: 130px;
+    width: 30%;
+}
+
+.bio>div{
+    border: 2px solid black;
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.calendar{
+    width: 35%;
+    margin: 20px;
+    margin-left: 150px;
+}
+
+.cal{
+    border: 2px solid black;
+    height: 70%;
+    width: 60%;
+    border-radius: 10px;
+    float: right;
+}
+
+
+
+.available{
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+}
+
+.green{
+    background-color: green;
+    width: 20%;
+    border-radius: 40%;
+    
+}
+
+.booked{
+    
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2%;
+}
+
+.red{
+    background-color: red;
+    width: 20%;
+    border-radius: 40%;
+}
+
+.calendar>button{
+    margin: 5%;
+    width: 25%;
+    height: 20%;
+    border-radius: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.151);
+    font-size: 20px;
+    border: none;
+}
+
+.userPhotos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pht1{
+    width: 15%;
+    height: 420px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 350px;
+}
+
+.pht2{
+    width: 15%;
+    height: 370px;
+    border: 2px solid black;
+    border-radius: 20px;
+    text-align: center;
+    line-height: 350px;
+}

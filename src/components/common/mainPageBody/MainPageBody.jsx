@@ -26,33 +26,41 @@ export default function MainPageBody() {
       <h2 className='msg3'>Top forum topics</h2>
       <section className='forums'>
         <section className='forumMsg1'>
-          <p>
+          <h3>
             Topic one
-          </p>
+          </h3>
           <p className='countbox'>
             Post Count
           </p>
         </section>
         <section className='forumMsg1'>
-          <p>
+          <h3>
             Topic two
-          </p>
+          </h3>
           <p className='countbox'>
             Post Count
           </p>
         </section>
         <section className='forumMsg1'>
-          <p>
+          <h3>
             Topic three
-          </p>
+          </h3>
           <p className='countbox'>
             Post Count
           </p>
         </section>
         <section className='forumMsg1'>
-          <p>
+          <h3>
             Topic fourth
+          </h3>
+          <p className='countbox'>
+            Post Count
           </p>
+        </section>
+        <section className='forumMsg1'>
+          <h3>
+            Topic five
+          </h3>
           <p className='countbox'>
             Post Count
           </p>
