@@ -4,6 +4,7 @@ import Foot from "./foot";
 import UserPreview from "./userPreview";
 import HeaderLogIn from "./headerLogIn";
 import Forum from "./forum";
+import MainForumPage from "./mainForumPage";
 
 
 
@@ -13,5 +14,6 @@ export {
     Foot,
     UserPreview,
     HeaderLogIn,
-    Forum
+    Forum,
+    MainForumPage
 }

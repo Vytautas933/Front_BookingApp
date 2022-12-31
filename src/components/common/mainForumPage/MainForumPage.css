@@ -1,0 +1,81 @@
+.topview{
+    border: 1px solid black;
+    justify-content: space-between;
+    display: flex;
+}
+
+body{
+    background-color: rgb(247, 247, 247);
+    height: 100%;
+  }
+
+
+
+.topview>button{
+    float: right;
+    background-color: black;
+    color: white;
+    width: 230px;
+    height: 50px;
+    text-align: center;
+    margin: 30px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.user{
+    width: 70%;
+    margin: 30px;
+}
+
+.topictext{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+.topictext>p{
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-left: 30px;
+    width: 80%;
+    padding: 5px;
+}
+
+.topictext>img{
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+}
+
+.com{
+    display: block;
+    width: 80%;   
+}
+
+.comments{
+    margin: 30px;
+    margin-left: 12%;
+    display: flex; 
+
+}
+
+.comments>img{
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    width: 70px;
+    max-height: 70px;
+    display: flex;
+    line-height: 55px;
+}
+
+.comPost{
+    border: 2px solid black;
+    width: 80%;
+    padding: 5px;
+    margin-left: 20px;
+}

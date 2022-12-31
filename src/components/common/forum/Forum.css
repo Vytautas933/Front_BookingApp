@@ -21,9 +21,9 @@
     font-size: 20px;
 }
 
-.main{
-    
+.main{ 
     display:contents;
+    position: relative ;
 }
 
 .topic{
@@ -36,6 +36,8 @@
     border: 2px solid black;
     border-radius: 50%;
     text-align: center;
+    width: 90px;
+    height: 90px;
 }
 
 .text{
