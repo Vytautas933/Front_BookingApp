@@ -17,5 +17,5 @@ export {
     HeaderLogIn,
     Forum,
     MainForumPage,
-    Explore
+    Explore,
 }

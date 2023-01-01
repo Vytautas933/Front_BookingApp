@@ -1,5 +1,6 @@
 import React from "react";
 import './Header.css';
+import { Link } from "react-router-dom";
 
 
 
@@ -12,10 +13,10 @@ function Header(){
            </section>
            <section className="header-navbar">
                 <ul>
-                    <li><a href="aa.js">Home</a></li>
-                    <li><a href="bb.js">Explore</a></li>
-                    <li><a href="cc.js">Forum</a></li>
-                    <li><a href="dd.js">About Us</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/forum">Forum</Link></li>
+                    <li><Link to="/explore">Explore</Link></li>
+                    <li><Link to="/us">About Us</Link></li>
                 </ul>
            </section>
            <section className="header-log">
