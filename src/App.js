@@ -1,11 +1,11 @@
 import React from "react";
-import{ Foot, HeaderLogIn, MainForumPage} from "./components/common";
+import{ Explore, Foot, HeaderLogIn} from "./components/common";
 
 function App() {
   return (
     <div className="App"> 
       <HeaderLogIn />
-      <MainForumPage />
+      <Explore />
       <Foot />
       
     </div>

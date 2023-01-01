@@ -55,6 +55,7 @@ export default function MainForumPage() {
                 </div>
             </div>
         </section>
+    
     </div>
   )
 }

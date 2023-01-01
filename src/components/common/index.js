@@ -5,6 +5,7 @@ import UserPreview from "./userPreview";
 import HeaderLogIn from "./headerLogIn";
 import Forum from "./forum";
 import MainForumPage from "./mainForumPage";
+import Explore from "./explore";
 
 
 
@@ -15,5 +16,6 @@ export {
     UserPreview,
     HeaderLogIn,
     Forum,
-    MainForumPage
+    MainForumPage,
+    Explore
 }
