@@ -3,7 +3,7 @@ import { Header } from '../components/common'
 import {Forum} from '../components/common'
 import {Foot }from '../components/common'
 
-function forumPage() {
+function ForumPage() {
   return (
     <div>
       <Header></Header>
@@ -14,4 +14,4 @@ function forumPage() {
   )
 }
 
-export default forumPage;
+export default ForumPage;

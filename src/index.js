@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import forumPage from './pages/forumPage';
-import explorePage from './pages/explorePage'
+import ForumPage from './pages/ForumPage';
+import ExplorePage from './pages/ExplorePage'
 import App from './App';
 import {
   createBrowserRouter,
@@ -16,11 +16,11 @@ const router = createBrowserRouter([
   },
   {
     path: "forum",
-    element: <forumPage/>,
+    element: <ForumPage/>,
   },
   {
     path: "explore",
-    element: <explorePage/>,
+    element: <ExplorePage/>,
   },
 ]);
 

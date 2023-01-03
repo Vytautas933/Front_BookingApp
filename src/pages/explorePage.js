@@ -4,14 +4,16 @@ import { Header } from '../components/common'
 import {Explore} from '../components/common'
 import {Foot }from '../components/common'
 
-function explorePage() {
+function ExplorePage() {
   return (
     <div>
+      <>
       <Header></Header>
       <Explore></Explore>
       <Foot></Foot>
+      </>
     </div>
   )
 }
 
-export default explorePage
+export default ExplorePage
