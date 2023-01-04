@@ -3,17 +3,20 @@ import './Header.css';
 import { Link } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 import SingUp from "../singUpPopUp/SingUp";
+import LogIn from '../logInPopUp/LogIn';
 
 
 
 
 function Header(){
     const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [open, setClose] = useState(false);
     
     return(
         
         <section className="header">
             <div id='singuppop'></div>
+            <div id='loginpop'></div>
            <section className="header-logo">
                 <a href="eee.js">IRentEye</a>
            </section>
@@ -28,12 +31,19 @@ function Header(){
            </section>
            <section className="header-log">
                 <section className="header-btn">
-                    <button onClick={() => {
-                        console.log("login")
-                    }}>Log in</button>
+                    <button 
+                    onClick={() => {
+                        setClose(true);
+                        const box = document.getElementById("loginpop")
+                        const log = createRoot(box)
+                        log.render(<LogIn isOpen={open}/>,
+                        )
+                        
+                    }}
+                    >Log in
+                    </button>
                     <button
                      onClick={() => {
-                        console.log("iki cia veikia")
                          setModalIsOpen(true);
                          const container = document.getElementById("singuppop")
                          const root = createRoot(container)
@@ -50,5 +60,5 @@ function Header(){
     )
     
 }
-// const root = ReactDOM.createRoot(document.getElementById("singuppop"));
+
 export default Header;

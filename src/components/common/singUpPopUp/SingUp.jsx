@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal'
+import './SingUp.css'
 
 const customStyles = {
   content: {
@@ -8,7 +9,11 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    backgroundColor: 'rgb(125, 162, 169)',
+    height: '350px',
+    width: '250px'
+    
   }
 };
 
@@ -22,33 +27,33 @@ function SingUp (props){
           isOpen={modalIsOpen}
           onRequestClose={() => setModalIsOpen(false)}
           style={customStyles}
-          contentLabel="Example Modal"
+          contentLabel="SingUp Modal"
         >
           <h2>Sing Up</h2>
           <form className='singUp-inner'>
         <label>
-        Username:
-        <input type="text" />
+        Username: <br />
+        <input className='in' type="text" />
         </label>
         <br />
         <label>
-        Email:
-        <input type="email" />
+        Email: <br />
+        <input className='in' type="email" />
         </label>
         <br />
         <label>
-        Password:
-        <input type="Password" />
+        Password: <br />
+        <input className='in' type="Password" />
         </label>
         <br />
         <label>
-        Repeat Password:
-        <input type="Password" />
+        Repeat Password: <br />
+        <input className='in' type="Password" />
         </label>
         <br />
         <label>
-        Gender:
-        <select >
+        Gender: <br />
+        <select className='in' >
             <option>Male</option>
             <option>Female</option>
             <option>Other</option>
@@ -57,7 +62,8 @@ function SingUp (props){
         </label>
         <br />
       </form>
-          <button onClick={() => setModalIsOpen(false)}>Close</button>
+          <button className='close-button' onClick={() => setModalIsOpen(false)}>Close</button>
+          <button className='singbtn'> Sing up</button>
         </Modal>
       </div>
     )

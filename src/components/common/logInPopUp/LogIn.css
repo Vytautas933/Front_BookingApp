@@ -1,0 +1,67 @@
+.login-inner{
+   font-size: 20px; 
+   
+}
+
+
+.close-btn{
+    /* position close button in top right corner */
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+  
+    /* remove text and display as cross */
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close-btn:before,
+.close-btn::after{
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #fff;
+  }
+  
+  .close-btn:before {
+    transform: rotate(45deg);
+  }
+  
+  .close-btn:after {
+    transform: rotate(-45deg);
+  }
+
+.loginbtn{
+    background-color: black;
+    color: white;
+    left: 32%;
+    margin-top: 60px;
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+}
+
+.input{
+    border-radius: 10px;
+    border: none;
+    height: 25px;
+    width: 100%;
+    margin-top: 5px; 
+}
+
+
+
+
+
