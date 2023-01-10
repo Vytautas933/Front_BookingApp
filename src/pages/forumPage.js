@@ -9,7 +9,6 @@ function ForumPage() {
       <Header></Header>
       <Forum></Forum>
       <Foot></Foot>
-      <div>sdfsdf</div>
     </div>
   )
 }

@@ -7,6 +7,9 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import MainForumPag from './pages/MainForumPage';
+import SellerPagePreview from './pages/SellerPagePreview'
+
 
 
 const router = createBrowserRouter([
@@ -16,11 +19,19 @@ const router = createBrowserRouter([
   },
   {
     path: "forum",
-    element: <ForumPage/>,
+    element: <ForumPage></ForumPage>,
   },
   {
     path: "explore",
     element: <ExplorePage/>,
+  },
+  {
+    path: "mainforumpage",
+    element: <MainForumPag />,
+  },
+  {
+    path: "sellerpage",
+    element: <SellerPagePreview/>
   },
 ]);
 

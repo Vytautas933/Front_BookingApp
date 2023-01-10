@@ -19,19 +19,9 @@
     align-content: left;   
     max-width: 100px;
     margin: 15px;
-    font-size: 20px;
-    margin-left: 20px;
+    font-size: 20px;      
 }
 
-/* .header-navbar{ 
-    flex-wrap: wrap;
-    align-content: center;
-    max-width: 400px;
-    margin: 15px;
-    
-    font-size: 20px;
-    margin-left: 130px; 
-} */
 
 .header-navbar>ul{
     list-style-type: none;

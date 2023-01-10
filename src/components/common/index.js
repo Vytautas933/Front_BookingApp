@@ -6,7 +6,6 @@ import HeaderLogIn from "./headerLogIn";
 import Forum from "./forum";
 import MainForumPage from "./mainForumPage";
 import Explore from "./explore";
-import SingUp from "./singUpPopUp";
 
 
 
@@ -19,5 +18,4 @@ export {
     Forum,
     MainForumPage,
     Explore,
-    SingUp,
 }

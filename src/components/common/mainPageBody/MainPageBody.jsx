@@ -1,5 +1,6 @@
 import './MainPageBody.css'
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function MainPageBody() {
   return (
@@ -15,13 +16,27 @@ export default function MainPageBody() {
       </section>
       <h2 className='msg2'>Top photographers</h2>
       <section className='photograpgersAvatars'>
-        <img src="/" alt="nuotrauka not found" />
-        <img src="/" alt="nuotrauka not found" />
-        <img src="/" alt="nuotrauka not found" />
-        <img src="/" alt="nuotrauka not found" />
-        <img src="/" alt="nuotrauka not found" />
-        <img src="/" alt="nuotrauka not found" />
-        <img src="/" alt="nuotrauka not found" />
+        <Link to="/sellerpage">
+        <img className='avatar' src="/" alt="nuotrauka not found" />
+        </Link>
+        <Link to="/sellerpage">
+        <img className='avatar' src="/" alt="nuotrauka not found" />
+        </Link>
+        <Link to="/sellerpage">
+        <img className='avatar' src="/" alt="nuotrauka not found" />
+        </Link>
+        <Link to="/sellerpage">
+        <img className='avatar' src="/" alt="nuotrauka not found" />
+        </Link>
+        <Link to="/sellerpage">
+        <img className='avatar' src="/" alt="nuotrauka not found" />
+        </Link>
+        <Link to="/sellerpage">
+        <img className='avatar' src="/" alt="nuotrauka not found" />
+        </Link>
+        <Link to="/sellerpage">
+        <img className='avatar' src="/" alt="nuotrauka not found" />
+        </Link>
       </section>
       <h2 className='msg3'>Top forum topics</h2>
       <section className='forums'>

@@ -15,8 +15,6 @@ function Header(){
     return(
         
         <section className="header">
-            <div id='singuppop'></div>
-            <div id='loginpop'></div>
            <section className="header-logo">
                 <a href="eee.js">IRentEye</a>
            </section>
@@ -30,6 +28,8 @@ function Header(){
                 </ul>
            </section>
            <section className="header-log">
+           <div id='singuppop'></div>
+            <div id='loginpop'></div>
                 <section className="header-btn">
                     <button 
                     onClick={() => {
@@ -57,6 +57,7 @@ function Header(){
                 
            </section>
         </section>
+        
     )
     
 }

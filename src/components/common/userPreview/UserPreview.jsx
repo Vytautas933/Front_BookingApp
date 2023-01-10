@@ -1,7 +1,12 @@
 import React from 'react'
 import './UserPreview.css'
+import Calendar from 'react-calendar'
 
 export default function UserPreview() {
+    const [date, setDate] = React.useState(new Date());
+    const onChange = date => {
+        setDate(date);
+      };
   return (
     <div className='userPreview'>
     <section className='info'>
@@ -24,7 +29,11 @@ export default function UserPreview() {
         </section>
         <section className='calendar'>
             <h2>Calendar</h2>
-            <div className='cal'></div>
+            <div className='cal'>
+                <Calendar 
+                onChange={onChange}
+                value={date}/>
+            </div>
             <div className='available'>
                 <p>Available dates</p>
                 <div className='green'></div>
