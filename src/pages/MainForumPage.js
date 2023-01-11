@@ -12,7 +12,7 @@ function MainForumPag() {
   const isLoggedIn = useRef(true);
 
   useEffect(() => {
-    if(localStorage.getItem('user') === null) {
+    if(localStorage.getItem('user') === '') {
     isLoggedIn.current = false
   }}, []);
 

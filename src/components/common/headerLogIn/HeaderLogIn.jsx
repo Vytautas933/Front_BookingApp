@@ -19,7 +19,10 @@ export default function HeaderLogIn() {
            <section className="header-log">
               <p className="name">Vardenis Pavardenis</p>
                 <section className="header-btn">
-                    <button>Log out</button>
+                    <button onClick={()=> {
+                      localStorage.clear();
+                      window.location.reload();
+                    }}>Log out</button>
                 </section>
                 
            </section>

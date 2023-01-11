@@ -1,19 +1,23 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import{  Foot, Header, MainPageBody, HeaderLogIn} from "./components/common";
 import { useRef } from 'react';
 
 function App() {
 
-  const isLoggedIn = useRef(true);
+  // const isLoggedIn = useRef(true);
+  const[isLoggedIn, setIsLoggedIn] = useState(false)
   
   useEffect(() => {
-    if(localStorage.getItem('user') === null) {
-    isLoggedIn.current = false
+    console.log(isLoggedIn)
+    console.log("ggg")
+    if(localStorage.getItem('user') != null) {
+    setIsLoggedIn(true);
+    
   }}, []);
 
   return (
     <div className="App"> 
-         {isLoggedIn.current ? (
+         {!isLoggedIn ? (
                 <Header />
             ) : (
               <HeaderLogIn />
