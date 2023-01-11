@@ -1,12 +1,10 @@
 .user{
-    border: 1px solid red;
-    width: 10%;
     display: inline-block;
+    box-sizing: border-box;
 }
 
 .info{
     display: flex;
-    border: 1px solid red;
 }
 
 
@@ -23,14 +21,14 @@
 }
 
 .rating{
-    display: flex;
-    justify-content: space-between;
+    display:flex;
+    /* justify-content: space-between; */
 }
 
 .bio{
     margin: 20px;
-    margin-left: 130px;
-    width: 30%;
+    /* margin-left: 130px; */
+    width: 100%;
 }
 
 .bio>div{
@@ -41,9 +39,9 @@
 }
 
 .calendar{
-    width: 35%;
+    width: 100%;
     margin: 20px;
-    margin-left: 150px;
+    /* margin-left: 150px; */
 }
 
 .react-calendar__tile {

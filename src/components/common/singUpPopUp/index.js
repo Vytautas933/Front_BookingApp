@@ -3,7 +3,7 @@ export  async function singup(username, email, password, repeatPassword, gender)
 
 
     if(password === repeatPassword){
-    await fetch('http://185.34.52.28:8090/api/user/register/user', {
+    await fetch('http://185.34.52.28:8090/api/user/register', {
     method: 'POST',
     body: JSON.stringify(data),
     headers: {

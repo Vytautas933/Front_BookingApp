@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal'
-import './TopicPopUp.css'
+import './CommentPopUp.css' 
 
 const customStyles = {
     content: {
@@ -11,35 +11,31 @@ const customStyles = {
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
       backgroundColor: 'rgb(125, 162, 169)',
-      height: '330px',
+      height: '280px',
       width: '400px',
       borderRadius: '20px'
     }
   };
 
-function TopicPopUp(props) {
+function CommentPopUp(props) {
 
     const [modalIsOpen, setModalIsOpen] = useState(props.isOpen);
 
   return (
     <div>
-         <Modal
+       <Modal
           isOpen={modalIsOpen}
           onRequestClose={() => setModalIsOpen(false)}
           style={customStyles}
           contentLabel="create topic Modal"
         >
-          <h2 className='sin'>Create New Topic</h2>
-          <div id='form'>
-          <label id='lbl'>
-            Topic: <br />
-            <input id='inpt' type="text" /><br />
-          </label>
-          <label id='lbl'> 
+          <h2 className='com'>Comment Post</h2>
+          <div id='box'>
+          <label id='lbk'> 
             Description: <br />
-            <textarea id='txtare' cols="50" rows="10"></textarea>
+            <textarea id='txtar' cols="50" rows="10"></textarea>
             <button className='close-button' onClick={() => setModalIsOpen(false)}>Close</button>
-            <button className='createbtn'> Create</button>
+            <button className='commentbtn'> Comment</button>
           </label>
           </div>
         </Modal>
@@ -47,4 +43,4 @@ function TopicPopUp(props) {
   )
 }
 
-export default TopicPopUp;
+export default CommentPopUp

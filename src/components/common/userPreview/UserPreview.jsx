@@ -14,8 +14,7 @@ export default function UserPreview() {
             <h2>Username</h2>
             <img className='avatar' src="/" alt="avatar" />
             <div className='rating'>
-                <p>Rating</p>
-                <p>5.0</p>
+                <p>Rating &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.0</p>
             </div>
         </section>
 

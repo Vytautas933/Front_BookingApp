@@ -10,9 +10,12 @@ export async function login(unameOrEmail, password){
     }
     })
     .then(res => res.json())
+    .then(localStorage.setItem('user', 'admin'))
     .then(data => console.log(data))
-  
-  
+    .then(setTimeout(() =>{
+      window.location.reload();
+  },1000))
+    
 }
 
 
