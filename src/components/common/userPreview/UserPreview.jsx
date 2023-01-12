@@ -1,6 +1,7 @@
 import React from 'react'
 import './UserPreview.css'
 import Calendar from 'react-calendar'
+import { booking } from '.';
 
 export default function UserPreview() {
     const [date, setDate] = React.useState(new Date());
@@ -41,7 +42,7 @@ export default function UserPreview() {
                 <p>Booked dates</p>
                 <div className='red'></div>
             </div>
-            <button>Book</button>
+            <button id='book' onClick={booking}>Book</button>
         </section>
     </section>
         <section className='userPhotos'>

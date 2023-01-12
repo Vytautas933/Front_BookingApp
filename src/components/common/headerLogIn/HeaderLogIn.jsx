@@ -5,9 +5,7 @@ import { Link } from "react-router-dom";
 export default function HeaderLogIn() {
   return (
     <div className="header">
-      <section className="header-logo">
-                <a href="eee.js">IRentEye</a>
-           </section>
+       <p><Link to="/" className='lgs'>IRentEye</Link></p>
            <section className="header-navbar">
                 <ul>
                      <li><Link to="/">Home</Link></li>

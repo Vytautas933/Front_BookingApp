@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import { useRef } from 'react';
-
+import React, { useEffect, useState } from 'react';
 import { Header } from '../components/common'
 import {Explore} from '../components/common'
 import {Foot }from '../components/common'
@@ -8,18 +6,19 @@ import {HeaderLogIn} from '../components/common';
 
 function ExplorePage() {
 
-  const isLoggedIn = useRef(true);
+  const[isLoggedIn, setIsLoggedIn] = useState(false)
   
   useEffect(() => {
-    if(localStorage.getItem('user') === '') {
-    isLoggedIn.current = false
-  }}, []);
+    if(localStorage.getItem('user') != null) {
+    setIsLoggedIn(true);
+    
+  }},[isLoggedIn]);
 
 
   return (
     <div>
       <>
-      {isLoggedIn.current ? (
+      {!isLoggedIn ? (
                 <Header />
             ) : (
               <HeaderLogIn />

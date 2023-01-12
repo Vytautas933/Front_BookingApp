@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Header } from '../components/common'
 import {Forum} from '../components/common'
 import {Foot }from '../components/common'
@@ -7,16 +6,17 @@ import {HeaderLogIn} from '../components/common';
 
 function ForumPage() {
 
-  const isLoggedIn = useRef(true);
-
-useEffect(() => {
-  if(localStorage.getItem('user') === '') {
-  isLoggedIn.current = false
-}}, []);
+  const[isLoggedIn, setIsLoggedIn] = useState(false)
+  
+  useEffect(() => {
+    if(localStorage.getItem('user') != null) {
+    setIsLoggedIn(true);
+    
+  }},[isLoggedIn]);
 
   return (
     <div>
-      {isLoggedIn.current ? (
+      {!isLoggedIn ? (
                 <Header />
             ) : (
               <HeaderLogIn />

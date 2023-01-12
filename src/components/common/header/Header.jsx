@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 import SingUp from "../singUpPopUp/SingUp";
 import LogIn from '../logInPopUp/LogIn';
-import { useNavigate, redirect } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 
 
@@ -15,10 +15,8 @@ function Header(){
     return(
         
         <section className="header">
-           <section className="header-logo">
-                <a href="eee.js">IRentEye</a>
-           </section>
-           
+            <p><Link to="/" className='lg'>IRentEye</Link></p>
+
            <section className="header-navbar">
                 <ul>
                     <li><Link to="/">Home</Link></li>
