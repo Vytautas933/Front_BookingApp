@@ -1,0 +1,59 @@
+body{
+  background-color: rgb(247, 247, 247);
+  height: 100%;
+}
+
+.msg1 {
+    margin: 20px;
+}
+
+.messege{
+    width: 95%;
+    margin-left: 1%;
+    border: solid 1px black;
+    border-radius: 5px;
+}
+
+p{
+    margin: 9px;
+    
+}
+
+.msg2{
+    margin: 20px;
+    justify-content: space-evenly;
+}
+
+.photograpgersAvatars{
+    margin: 20px;
+    display: flex;
+    width: 95%;
+    justify-content: space-evenly;
+}
+
+.avatar{
+    border: solid 1px black;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    flex-wrap: wrap;
+    text-align: left;
+    line-height: 140px;
+}
+
+
+.msg3{
+    margin: 20px;
+}
+
+.forumMsg1{
+    display: flex;
+    flex: 1;
+    margin-left: 2%;
+    width: 95%;
+    margin-top: 3px;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+

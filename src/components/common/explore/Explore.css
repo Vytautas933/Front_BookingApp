@@ -1,0 +1,27 @@
+body{
+    height: fit-content;
+}
+.explore{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.xp1{
+    border: 2px solid black;
+    height: 270px;
+    width: 13%;
+    margin: 2%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    border-radius: 20px;
+}
+
+.xp2{
+    border: 2px solid black;
+    height: 250px;
+    width: 13%;
+    margin: 2%;
+    margin-right: 1%;
+    border-radius: 20px;
+}

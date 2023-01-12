@@ -1,0 +1,27 @@
+#box{
+    text-align: center;
+    font-size: 22px;
+}
+
+
+.commentbtn{
+    text-align: center;
+    background-color: black;
+    color: white;
+    left: 38%;
+    margin-top: 180px;
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+}
+
+
+#txtar{
+    border: none;
+    border-radius: 15px;
+}
+
+#lbl{
+    text-align: left;
+}

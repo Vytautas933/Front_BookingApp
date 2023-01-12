@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import{  Foot, Header, MainPageBody, HeaderLogIn} from "./components/common";
+import { Header } from '../components/common'
+import {MainForumPage} from '../components/common'
+import { Foot }from '../components/common'
+import {HeaderLogIn} from '../components/common';
 
-function App() {
 
+function MainForumPag() {
 
   const[isLoggedIn, setIsLoggedIn] = useState(false)
   
@@ -13,17 +16,16 @@ function App() {
   }},[isLoggedIn]);
 
   return (
-    <div className="App"> 
-         {!isLoggedIn ? (
+    <div>
+      {!isLoggedIn ? (
                 <Header />
             ) : (
               <HeaderLogIn />
             )}
-      <MainPageBody />
-      <Foot />
-      
+      <MainForumPage></MainForumPage>
+      <Foot></Foot>
     </div>
   )
 }
 
-export default App;
+export default MainForumPag

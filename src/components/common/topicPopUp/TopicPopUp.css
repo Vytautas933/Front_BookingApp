@@ -1,0 +1,33 @@
+#form{
+    text-align: center;
+    font-size: 22px;
+}
+
+#lbl{
+    text-align: left;
+}
+
+#inpt{
+    width: 80%;
+    border: none;
+    height: 25px;
+    border-radius: 15px;
+}
+
+#txtare{
+    border: none;
+    border-radius: 15px;
+}
+           
+.createbtn{
+    text-align: center;
+    background-color: black;
+    color: white;
+    left: 38%;
+    margin-top: 180px;
+    position: absolute;
+    height: 40px;
+    width: 100px;
+    border-radius: 15px;
+}
+
