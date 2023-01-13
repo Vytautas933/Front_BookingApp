@@ -1,0 +1,85 @@
+.topview{
+    justify-content: space-between;
+    display: flex;
+}
+
+body{
+    background-color: rgb(247, 247, 247);
+    height: 20%;
+  }
+
+
+
+.topview>button{
+    float: right;
+    background-color: black;
+    color: white;
+    width: 230px;
+    height: 50px;
+    text-align: center;
+    margin: 30px;
+    border-radius: 50px;
+    font-size: 20px;
+}
+
+.user{
+    width: 70%;
+    margin: 30px;
+}
+
+.topictext{
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+.topictext>p{
+    border: 2px solid black;
+    border-radius: 15px;
+    margin-left: 30px;
+    width: 80%;
+    padding: 5px;
+}
+
+.topictext>img{
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 70px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+}
+
+.com{
+    display: block;
+    width: 70%; 
+    margin-left: 20px;  
+}
+
+.comments{
+    margin: 30px;
+    margin-left: 12%;
+    display: flex; 
+
+}
+
+.comments>img{
+    border: 2px solid black;
+    border-radius: 50%;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    line-height: 50px;
+}
+
+.comPost{
+    border: 2px solid black;
+    width: 80%;
+    padding: 5px;
+    margin-left: 20px;
+    border-radius: 10px;
+    background-color: rgb(125, 162, 169);
+    color: white;
+    height: 40px;
+}
