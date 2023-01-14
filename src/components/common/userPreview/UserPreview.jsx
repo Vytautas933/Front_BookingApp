@@ -30,8 +30,8 @@ export default function UserPreview() {
         </section>
         <section className='calendar'>
             <h2>Calendar</h2>
-            <div className='cal'>
-                <Calendar className={"call"} 
+            <div >
+                <Calendar className={"cal"} 
                 onChange={onChange}
                 value={date}/>
             </div>
