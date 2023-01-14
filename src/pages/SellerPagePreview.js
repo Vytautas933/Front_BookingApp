@@ -8,10 +8,13 @@ import {HeaderLogIn} from '../components/common';
 function SellerPagePreview() {
 
   const[isLoggedIn, setIsLoggedIn] = useState(false)
+  
 
 useEffect(() => {
+  const btn = document.getElementById('book')
   if(localStorage.getItem('user') != null) {
     setIsLoggedIn(true);
+    btn.style.backgroundColor = 'black';
     
   }},[isLoggedIn]);
 

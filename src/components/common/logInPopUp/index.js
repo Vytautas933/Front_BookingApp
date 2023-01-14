@@ -3,7 +3,7 @@ export async function login(unameOrEmail, password){
 
 
   const data = {unameOrEmail, password}
-   const response = await fetch('http://185.34.52.28:8090/api/user/login', {
+   const response = await fetch('https://irenteye.com:8443/api/user/login', {
   method: 'POST',
   body: JSON.stringify(data),
   headers: {
@@ -18,7 +18,7 @@ export async function login(unameOrEmail, password){
 
   if (response.status === 200 || response.status === 201) {
     localStorage.setItem('user', unameOrEmail);
-    alert("Very nice!!!")
+    alert("Great success!!!")
     return true;
   } else {
     alert(response.message)

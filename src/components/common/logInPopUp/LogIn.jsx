@@ -2,9 +2,6 @@ import React, { useState } from 'react';
 import Modal from 'react-modal'
 import './LogIn.css'
 import { login } from '.';
-import {useNavigate} from 'react-router-dom';
-import { useEffect } from 'react';
-import { renderHook } from '@testing-library/react';
 // import { Navigate, Route } from 'react-router-dom';
 
 
@@ -25,21 +22,21 @@ const cststyle = {
 };
 
 
-// class RAMONAS extends React.Component{
-// }
 
 function LogIn(props) {
     const [open, setClose] = useState(props.isOpen);
     const [unameOrEmail, setUnameOrEmail] = useState('');
     const [password, setPassword] = useState('');
-    let log = false;
    
 
 
     const handleClick = (event) => {
       event.preventDefault();
-      log =  login(unameOrEmail, password);
-      props.NavHost("/forum")
+      login(unameOrEmail, password);
+      setTimeout(() => {
+        setClose(false);
+        window.location.reload();
+      }, 1000)
   }
 
   

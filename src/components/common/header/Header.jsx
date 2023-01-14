@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 import { createRoot } from 'react-dom/client';
 import SingUp from "../singUpPopUp/SingUp";
 import LogIn from '../logInPopUp/LogIn';
-import { useNavigate} from 'react-router-dom';
 
 
 
 function Header(){
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [open, setClose] = useState(false);
-    const navigation = useNavigate();
     return(
         
         <section className="header">
@@ -34,7 +32,7 @@ function Header(){
                         setClose(true);
                         const box = document.getElementById("loginpop")
                         const log = createRoot(box)
-                        log.render(<LogIn isOpen={open} NavHost={navigation}/>,
+                        log.render(<LogIn isOpen={open}/>,
                         )
                         
                     }}

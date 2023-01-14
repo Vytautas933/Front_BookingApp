@@ -2,6 +2,7 @@ import React from 'react'
 import './UserPreview.css'
 import Calendar from 'react-calendar'
 import { booking } from '.';
+import 'react-calendar/dist/Calendar.css'
 
 export default function UserPreview() {
     const [date, setDate] = React.useState(new Date());
@@ -30,7 +31,7 @@ export default function UserPreview() {
         <section className='calendar'>
             <h2>Calendar</h2>
             <div className='cal'>
-                <Calendar 
+                <Calendar className={"call"} 
                 onChange={onChange}
                 value={date}/>
             </div>
