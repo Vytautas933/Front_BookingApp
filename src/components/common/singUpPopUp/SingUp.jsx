@@ -12,7 +12,7 @@ const customStyles = {
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
     backgroundColor: 'rgb(125, 162, 169)',
-    height: '350px',
+    height: '400px',
     width: '400px',
     borderRadius: '20px'
   }
@@ -27,10 +27,17 @@ function SingUp (props){
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
   const [gender, setGender] = useState('');
+  const [seller, setSeller] = useState(false);
 
   const handleClick = (event) => {
     event.preventDefault();
-    singup(username, email, password, repeatPassword, gender)
+    setTimeout(() => {
+      singup(username, email, password, repeatPassword, gender, seller)
+    }, 1000)
+    
+    setTimeout(() => {
+      setModalIsOpen(false);
+    }, 1000)
   }
 
     return (
@@ -85,6 +92,12 @@ function SingUp (props){
         </select>
         </label>
         <br />
+        <label >
+          <div className='chebox'>
+          Sing up as Photographer?
+          <input className='inche' id='checkbox' type="checkbox" value={seller} onChange={e => setSeller(e.target.checked)}/>
+          </div>
+        </label>
       </form>
           <button className='close-button' onClick={() => setModalIsOpen(false)}>Close</button>
           <button className='singbtn' onClick={handleClick}> Sing up</button>

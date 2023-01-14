@@ -44,16 +44,7 @@
     /* margin-left: 150px; */
 }
 
-.react-calendar__tile {
-  color: red;
-}
-.react-calendar__navigation {
-  text-align: center;
-}
 
-.react-calendar__navigation__arrow {
-  color: red;
-}
 
 .cal{
     border: 2px solid black;
@@ -99,7 +90,7 @@
     height: 20%;
     border-radius: 20px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.151);
+    background-color: rgba(0, 0, 0, 0.3);
     font-size: 20px;
     border: none;
 }
