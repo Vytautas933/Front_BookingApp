@@ -41,7 +41,6 @@
 .calendar{
     width: 100%;
     margin: 20px;
-    /* margin-left: 150px; */
 }
 
 
@@ -52,6 +51,7 @@
     width: 60%;
     border-radius: 10px;
     float: right;
+    margin-right: 20px;
 }
 
 
