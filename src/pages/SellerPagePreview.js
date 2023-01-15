@@ -16,6 +16,7 @@ useEffect(() => {
     setIsLoggedIn(true);
     btn.style.backgroundColor = 'black';
     
+    
   }},[isLoggedIn]);
 
   return (

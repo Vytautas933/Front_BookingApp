@@ -2,7 +2,9 @@ import React from "react";
 import './HeaderLogIn.css'
 import { Link } from "react-router-dom";
 
+
 export default function HeaderLogIn() {
+  const username = localStorage.getItem('user')
   return (
     <div className="header">
        <p><Link to="/" className='lgs'>IRentEye</Link></p>
@@ -15,7 +17,7 @@ export default function HeaderLogIn() {
                 </ul>
            </section>
            <section className="header-log">
-              <p className="name">Vardenis Pavardenis</p>
+              <p className="name">{username}</p>
                 <section className="header-btn">
                     <button onClick={()=> {
                       localStorage.clear();

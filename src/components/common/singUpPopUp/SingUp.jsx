@@ -26,7 +26,7 @@ function SingUp (props){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [repeatPassword, setRepeatPassword] = useState('');
-  const [gender, setGender] = useState('');
+  const [gender, setGender] = useState('Male');
   const [seller, setSeller] = useState(false);
 
   const handleClick = (event) => {

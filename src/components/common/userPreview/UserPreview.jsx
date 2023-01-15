@@ -1,19 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState} from 'react'
 import './UserPreview.css'
 import Calendar from 'react-calendar'
 import { booking } from '.';
-import 'react-calendar/dist/Calendar.css'
+
 
 export default function UserPreview() {
     const [date, setDate] = React.useState(new Date());
+    const [isDisabled, setIsDisabled] = useState(false);
+
+    
+useEffect(() => {
+        if(localStorage.getItem("user") === null) {
+            setIsDisabled(true);
+        } else {
+            setIsDisabled(false);
+        }
+    }, []);
+
     const onChange = date => {
         setDate(date);
       };
+
+
+      
   return (
     <div className='userPreview'>
     <section className='info'>
         <section className='user'>
-            <h2>Username</h2>
+            <h2 className='usernam'>Username</h2>
             <img className='avatar' src="/" alt="avatar" />
             <div className='rating'>
                 <p>Rating &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.0</p>
@@ -29,12 +43,8 @@ export default function UserPreview() {
             </div>
         </section>
         <section className='calendar'>
+            <div className='half'>
             <h2>Calendar</h2>
-            <div >
-                <Calendar className={"cal"} 
-                onChange={onChange}
-                value={date}/>
-            </div>
             <div className='available'>
                 <p>Available dates</p>
                 <div className='green'></div>
@@ -44,6 +54,14 @@ export default function UserPreview() {
                 <div className='red'></div>
             </div>
             <button id='book' onClick={booking}>Book</button>
+            </div>
+            <div className='cal' >
+                <Calendar
+                onChange={onChange}
+                value={date}
+                tileDisabled={() => isDisabled}
+                />
+            </div>
         </section>
     </section>
         <section className='userPhotos'>
