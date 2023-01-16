@@ -1,6 +1,7 @@
 import './MainPageBody.css'
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Cucikas } from '..'
 
 export default function MainPageBody() {
   return (
@@ -17,25 +18,25 @@ export default function MainPageBody() {
       <h2 className='msg2'>Top photographers</h2>
       <section className='photograpgersAvatars'>
         <Link to="/sellerpage">
-        <img className='avatar' src="/" alt="nuotrauka not found" />
+        <img className='avatar' src={Cucikas} alt="nuotrauka not found" />
         </Link>
         <Link to="/sellerpage">
-        <img className='avatar' src="/" alt="nuotrauka not found" />
+        <img className='avatar' src={Cucikas} alt="nuotrauka not found" />
         </Link>
         <Link to="/sellerpage">
-        <img className='avatar' src="/" alt="nuotrauka not found" />
+        <img className='avatar' src={Cucikas} alt="nuotrauka not found" />
         </Link>
         <Link to="/sellerpage">
-        <img className='avatar' src="/" alt="nuotrauka not found" />
+        <img className='avatar' src={Cucikas} alt="nuotrauka not found" />
         </Link>
         <Link to="/sellerpage">
-        <img className='avatar' src="/" alt="nuotrauka not found" />
+        <img className='avatar' src={Cucikas} alt="nuotrauka not found" />
         </Link>
         <Link to="/sellerpage">
-        <img className='avatar' src="/" alt="nuotrauka not found" />
+        <img className='avatar' src={Cucikas} alt="nuotrauka not found" />
         </Link>
         <Link to="/sellerpage">
-        <img className='avatar' src="/" alt="nuotrauka not found" />
+        <img className='avatar' src={Cucikas} alt="nuotrauka not found" />
         </Link>
       </section>
       <h2 className='msg3'>Top forum topics</h2>

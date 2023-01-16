@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './UserPreview.css'
 import Calendar from 'react-calendar'
 import { booking, getPhotosList, getusersList } from '.';
+import Panda from './images/Panda.png'
+import Cucikas from './images/Cucikas.png'
 
 
 export default function UserPreview() {
@@ -10,31 +12,23 @@ export default function UserPreview() {
     const [users, setUsers] = useState([]);
     const [photos, setPhotos] = useState([]);
     
+    useEffect(() => {     
+            const data = getusersList();     
+            data.then(async data1 =>{console.log(data1)
+                setUsers(data1)})      
+        }
+     
+    , []);
+
     useEffect(() => {
+        users.forEach(user => {
+            getPhotosList(user).then(data => {
+                setPhotos(data);
+            });
+        });
+    }, [users]);
 
-        (async () =>{
-            await getusersList()
-            .then(data => {setUsers(data); console.log(data)})
-        })();
-
-        // async function fetctusers(){
-        //     let res = await fetch('https://irenteye.com:8443/api/seller/get/sellers')
-        //     res = await res.json()
-        //     setUsers(res)
-        // }
-
-        // fetctusers();
-        // (async() => {
-        //     const data = await getusersList().then(data2 =>  setUsers(data2))
-             
-        // })();
-        
-        // // getusersList()
-        
-        
-    }, []);
-
-    console.log(users)
+    
 
     useEffect(() => {
         if (localStorage.getItem("user") === null) {
@@ -48,14 +42,14 @@ export default function UserPreview() {
         setDate(date);
     };
 
-
+console.log(photos.size)
 
     return (
         <div className='userPreview'>
             <section className='info'>
                 <section className='user'>
                     <h2 className='usernam'>Username</h2>
-                    <img className='avatar' src="/" alt="avatar" />
+                    <img className='avatar' src={Cucikas} alt="avatar" />
                     <div className='rating'>
                         <p>Rating &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.0</p>
                     </div>
@@ -92,11 +86,16 @@ export default function UserPreview() {
                 </section>
             </section>
             <section className='userPhotos'>
-                {/* {photos.map(photo => (
-                <img key={photo.id} className='pht1' src={'photo:image/png;base64'} alt="foto" />      
-                // <img key={photo.id} className='pht2' src={photo.tags}alt="foto2" />
-
-                ))} */}
+                
+                    <img className='pht1' src={Panda} alt="foto" />
+                    <img className='pht2' src={Panda} alt="foto" />
+                    <img className='pht1' src={Panda} alt="foto" />
+                    <img className='pht2' src={Panda} alt="foto" />
+                    <img className='pht1' src={Panda} alt="foto" />
+                    <img className='pht2' src={Panda} alt="foto" />
+                
+                      
+                
 
             </section>
 

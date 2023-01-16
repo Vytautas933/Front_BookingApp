@@ -6,6 +6,8 @@ import HeaderLogIn from "./headerLogIn";
 import Forum from "./forum";
 import MainForumPage from "./mainForumPage";
 import Explore from "./explore";
+import Panda from './images/Panda.png'
+import Cucikas from './images/Cucikas.png'
 
 
 
@@ -18,4 +20,6 @@ export {
     Forum,
     MainForumPage,
     Explore,
+    Panda,
+    Cucikas   
 }
