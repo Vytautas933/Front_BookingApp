@@ -6,17 +6,17 @@ export default UserPreview;
 
 export function getusersList(){
     return fetch('https://irenteye.com:8443/api/seller/get/sellers')
-    .then(res => res.json())
-    .then(data => {
-        return data;
-    });
+    .then(res => res.json())  
+    };
    
-}
+
 
 export function getPhotosList(id) {
-    console.log(id)
+    // console.log(id)
   return fetch(`https://irenteye.com:8443/api/image/preview/${id}`)
-  .then(res => res.text());
+  .then(res => res.blob())
+  .then(data => console.log(data))
+  
 }
 
 

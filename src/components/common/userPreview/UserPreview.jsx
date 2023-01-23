@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import './UserPreview.css'
 import Calendar from 'react-calendar'
 import { booking, getPhotosList, getusersList } from '.';
-import Panda from './images/Panda.png'
 import Cucikas from './images/Cucikas.png'
+
 
 
 export default function UserPreview() {
@@ -11,22 +11,21 @@ export default function UserPreview() {
     const [isDisabled, setIsDisabled] = useState(false);
     const [users, setUsers] = useState([]);
     const [photos, setPhotos] = useState([]);
+    // const [isLoading, setIsLoading] = useState(false)
     
-    useEffect(() => {     
-            const data = getusersList();     
-            data.then(async data1 =>{console.log(data1)
-                setUsers(data1)})      
-        }
-     
-    , []);
-
     useEffect(() => {
-        users.forEach(user => {
-            getPhotosList(user).then(data => {
-                setPhotos(data);
+        getusersList()
+          .then(data => {
+            setUsers(data);
+            data.forEach(user => {
+              getPhotosList(user).then(blob => {
+                const objectUrl = URL.createObjectURL(blob);
+                setPhotos(prevPhotos => [...prevPhotos, objectUrl]);
+              });
             });
-        });
-    }, [users]);
+          })
+          .catch(error => console.log(error));
+      }, []);
 
     
 
@@ -42,7 +41,7 @@ export default function UserPreview() {
         setDate(date);
     };
 
-console.log(photos.size)
+
 
     return (
         <div className='userPreview'>
@@ -85,14 +84,16 @@ console.log(photos.size)
                     </div>
                 </section>
             </section>
-            <section className='userPhotos'>
-                
+            <section id='nuotrauka' className='userPhotos'>
+                {photos.map((photo, index) => (
+                    <img className='pht1' key={index} src={photo} alt="foto" />
+                ))}
+                    
+                    {/* <img className='pht2' src={Panda} alt="foto" />
                     <img className='pht1' src={Panda} alt="foto" />
                     <img className='pht2' src={Panda} alt="foto" />
                     <img className='pht1' src={Panda} alt="foto" />
-                    <img className='pht2' src={Panda} alt="foto" />
-                    <img className='pht1' src={Panda} alt="foto" />
-                    <img className='pht2' src={Panda} alt="foto" />
+                    <img className='pht2' src={Panda} alt="foto" /> */}
                 
                       
                 
