@@ -14,9 +14,7 @@ export function getusersList(){
 export function getPhotosList(id) {
     // console.log(id)
   return fetch(`https://irenteye.com:8443/api/image/preview/${id}`)
-  .then(res => res.blob())
-  .then(data => console.log(data))
-  
+  .then(res => res.blob()) 
 }
 
 

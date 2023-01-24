@@ -16,13 +16,12 @@ export default function UserPreview() {
     useEffect(() => {
         getusersList()
           .then(data => {
-            setUsers(data);
-            data.forEach(user => {
-              getPhotosList(user).then(blob => {
-                const objectUrl = URL.createObjectURL(blob);
-                setPhotos(prevPhotos => [...prevPhotos, objectUrl]);
-              });
-            });
+            console.log(data)
+            const photoPromises = data.map(user => getPhotosList(user));
+            Promise.all(photoPromises)
+              .then(blobs => blobs.map(blob => URL.createObjectURL(blob)))
+              .then(photos => setPhotos(photos))
+              .catch(error => console.log(error));
           })
           .catch(error => console.log(error));
       }, []);
@@ -86,7 +85,8 @@ export default function UserPreview() {
             </section>
             <section id='nuotrauka' className='userPhotos'>
                 {photos.map((photo, index) => (
-                    <img className='pht1' key={index} src={photo} alt="foto" />
+                    <img className='pht1' key={index} src={photo} alt="foto" />,
+                    <img className='pht2' key={index +1} src={photo} alt="foto" />
                 ))}
                     
                     {/* <img className='pht2' src={Panda} alt="foto" />
