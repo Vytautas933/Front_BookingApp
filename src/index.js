@@ -31,7 +31,7 @@ const router = createBrowserRouter([
     element: <MainForumPag />,
   },
   {
-    path: "sellerpage",
+    path: "sellerpage/:id",
     element: <SellerPagePreview/>
   },
 ]);

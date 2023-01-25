@@ -1,32 +1,49 @@
 import React, { useEffect, useState } from 'react'
 import './UserPreview.css'
 import Calendar from 'react-calendar'
-import { booking, getPhotosList, getusersList } from '.';
+import { booking, getPhotosList } from '.';
 import Cucikas from './images/Cucikas.png'
+import { useParams } from 'react-router-dom'
 
 
 
 export default function UserPreview() {
+    let { id } = useParams();
     const [date, setDate] = useState(new Date());
     const [isDisabled, setIsDisabled] = useState(false);
-    const [users, setUsers] = useState([]);
     const [photos, setPhotos] = useState([]);
     // const [isLoading, setIsLoading] = useState(false)
+
+    // useEffect(() => {
+    //     getusersList()
+    //       .then(data => {
+    //         console.log(data)
+    //         const photoPromises = data.map(user => getPhotosList(user));
+    //         Promise.all(photoPromises)
+    //           .then(blobs => blobs.map(blob => URL.createObjectURL(blob)))
+    //           .then(photos => setPhotos(photos))
+    //           .catch(error => console.log(error));
+    //       })
+    //       .catch(error => console.log(error));
+    //   }, []);
     
     useEffect(() => {
-        getusersList()
-          .then(data => {
-            console.log(data)
-            const photoPromises = data.map(user => getPhotosList(user));
-            Promise.all(photoPromises)
-              .then(blobs => blobs.map(blob => URL.createObjectURL(blob)))
-              .then(photos => setPhotos(photos))
-              .catch(error => console.log(error));
-          })
-          .catch(error => console.log(error));
-      }, []);
+        async function fetchPhotos() {
+            let photos = [];
+            for (let i = 0; i < 4; i++) {
+                let photo = await getPhotosList(id);
+                photos.push(URL.createObjectURL(photo));
+            }
+           
+                
+           
+           
+        }
+        fetchPhotos();
+        
+    }, [id]);
 
-    
+    console.log(photos)
 
     useEffect(() => {
         if (localStorage.getItem("user") === null) {
@@ -84,19 +101,17 @@ export default function UserPreview() {
                 </section>
             </section>
             <section id='nuotrauka' className='userPhotos'>
-                {photos.map((photo, index) => (
-                    <img className='pht1' key={index} src={photo} alt="foto" />,
-                    <img className='pht2' key={index +1} src={photo} alt="foto" />
-                ))}
+                
                     
-                    {/* <img className='pht2' src={Panda} alt="foto" />
+                    {/* <img className='pht1' src={photos} alt="foto" /> */}
+                {/* <img className='pht2' src={Panda} alt="foto" />
                     <img className='pht1' src={Panda} alt="foto" />
                     <img className='pht2' src={Panda} alt="foto" />
                     <img className='pht1' src={Panda} alt="foto" />
                     <img className='pht2' src={Panda} alt="foto" /> */}
-                
-                      
-                
+
+
+
 
             </section>
 
